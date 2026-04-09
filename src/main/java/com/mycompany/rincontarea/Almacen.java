@@ -9,6 +9,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;
 
+
 /**
  *
  * @author eduar
@@ -45,5 +46,15 @@ public class Almacen {
       }
      
  }
+public void enviarACamion(int fila, int col){
+int contador = 0;
+Paquete p =muelle[fila][col];
+muelle[fila][col] = null;
+colaSalida.add(p);
+//Actualizamos las estadisticas
+contador = estadisticas.getOrDefault(p.getDestino(), 0);
+estadisticas.put (p.getDestino(), contador + 1);
+
+}
 
 }

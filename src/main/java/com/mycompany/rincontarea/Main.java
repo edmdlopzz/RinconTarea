@@ -10,7 +10,12 @@ package com.mycompany.rincontarea;
  */
 public class Main {
  public static void main (String[] args){
+   Almacen almacen = new Almacen();
      Paquete Paquete = new Paquete ("COD-01", -3, "Madrid");
+ 
+ 
+ 
+ 
  }
 
 }

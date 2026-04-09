@@ -54,5 +54,9 @@ public class Paquete {
         return codigo;
     }
 
+    public String getDestino() {
+        return destino;
+    }
+
 
 }
