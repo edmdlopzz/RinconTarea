@@ -4,6 +4,7 @@
  */
 package com.mycompany.rincontarea;
 
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;
@@ -27,7 +28,22 @@ public class Almacen {
 
 //Metodo 1 
  public void recepcionarPaquete(Paquete p, int fila, int col) {
+//Verifica si el codigo de seguirdad ya existe y en ese caso genera error y salimos 
+     if (registro.contains(p.getCodigo())){
+   System.out.println("Error: el codigo" + p.getCodigo() + "ya existe");
+   return;
+    }
+//Si no existe y la posicion esta libre, almacenamos el `paquete y registra su codigo 
+   if (muelle[fila][col] ==null) {
+       muelle[fila][col] =p;
+       registro.add(p.getCodigo());
+    System.out.println("El paquete se ha almacenado en la posición" + fila + "," + col);
+   } 
+   
+   else {
+        System.out.println("Error. La posición" + fila + "," + col + "ya está ocupada");
+      }
+     
+ }
 
-
-}    
 }
